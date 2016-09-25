@@ -11,7 +11,7 @@ title:  'Art-one|abhi',
 heading: 'ARTICLE ONE',
 date: 'sdja',
 content:` <p>
-        This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        is just a reminder of things could easily go wrong yes the article one is just a reminder!
         This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!
         
     </p>
