@@ -126,9 +126,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get(':/articlename',function(req,res){
-    var articlename=reqes.params.articlename;
-    res.send(createtemplate(articles[articlename]));
+app.get('/:articleName',function(req,res){
+    var articleName=reqes.params.articleName;
+    res.send(createtemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
