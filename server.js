@@ -5,7 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone={
+var articles={
+    
+ 'article-one': {
 
 title:  'Art-one|abhi',
 heading: 'ARTICLE ONE',
@@ -28,8 +30,50 @@ content:` <p>
         
     </p>`
     
-};
 
+},
+ 'article-two':{
+     title:  'Art-two|abhi',
+heading: 'ARTICLE TWO',
+date: 'sdja',
+content:` <p>
+        is just a reould easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        
+    </p>
+    
+     <p>
+        This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        This is justould easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        
+    </p>
+    
+     <p>
+        This is justould easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        
+    </p>`
+    
+ },
+ 'article-three':{
+     title:  'Art-three|abhi',
+heading: 'ARTICLE THREE',
+date: 'sdja',
+content:` <p>
+        is just a reminrong yes the article one is just a reminder!
+        
+    </p>
+    
+     <p>
+        This is just a rong yes the article one is just a reminder!
+        
+    </p>
+    
+     <p>
+        This is just a d easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        
+    </p>`
+    
+ }
+};
 function createtemplate(data){
 
 var title=data.title;
@@ -82,16 +126,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-    res.send(createtemplate(articleone));
-});
-
-app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get(':/articleName',function(req,res){
+    var articlename=reqes.params.articlename;
+    res.send(createtemplate(articles[articlename]));
 });
 
 app.get('/ui/style.css', function (req, res) {
