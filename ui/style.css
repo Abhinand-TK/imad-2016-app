@@ -20,3 +20,11 @@ body {
     height: 200px;
 }
 
+.c{
+ max-width: 900px;
+ margin: 0 auto;
+ color: #0086d4;
+ font-family: cursive;
+ padding-top: 100px;
+        
+  }
