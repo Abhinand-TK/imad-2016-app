@@ -5,6 +5,78 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleone={
+
+title:  'Art-one|abhi',
+heading: 'ARTICLE ONE',
+date: 'sdja',
+content:` <p>
+        This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        
+    </p>
+    
+     <p>
+        This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        
+    </p>
+    
+     <p>
+        This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!This is just a reminder of things could easily go wrong yes the article one is just a reminder!
+        
+    </p>`
+    
+};
+
+function createtemplate(data){
+
+var title=data.title;
+var heading=data.heading;
+var date=data.date;
+var content=data.content;
+
+var htmlTemplate= `<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+          <link href="/ui/style.css" rel="stylesheet" />
+    
+    </head>
+    
+<body>
+    
+<div class ="c">   
+
+    <div>
+        <a href="/">HOME</a>
+    </div>
+    
+<hr/>
+
+<h3>
+    ${heading}
+</h3>
+
+<div>
+    
+    ${date}
+</div>
+
+ <div>
+   ${content}
+</div>
+
+</div>
+  
+</body>
+</html>
+  `;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
