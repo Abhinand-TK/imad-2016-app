@@ -5,7 +5,7 @@ var element = document.getElementById('text');
 element.innerHTML='Whatever that was never said was never ever enough! ';
 
 var img = document.getElementById('neel');
-var marginleft =0;
+var marginLeft =0;
 
 function moveright()
 {
